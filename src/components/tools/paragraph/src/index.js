@@ -130,6 +130,7 @@ class Paragraph {
    * @public
    */
   validate(savedData) {
+    console.log('hello from paragraph')
     return true;
   }
 
