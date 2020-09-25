@@ -56,10 +56,10 @@ export default class Saver extends Module {
    */
   private async getSavedData(block: Block): Promise<ValidatedData> {
     const blockData = await block.save();
-    // const isValid = blockData && await block.validate(blockData.data);
+    const isValid = blockData && await block.validate(blockData.data);
     return {
       ...blockData,
-      isValid: true,
+      isValid,
     };
   }
 
